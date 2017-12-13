@@ -6,36 +6,33 @@
         <link rel="stylesheet" href="style.css" />
         <script src="main.js"></script>
         <script src="banco.js"></script>
-        <title>SQLite: Insert, Select & Update</title>
+        <title>calculador de notas</title>
     </head>
 
     <body>
-        <h1>SQLite: Insert, Select & Update</h1>
+        <h1>calculador de notas</h1>
         <div class="aligncenter">
             <form class="form">
                 <input type="hidden" id="field-id" value="" />
                 <div class="box">
                     <input type="text" id="field-name"/>
-                    <label for="field-name">Nome</label>
+                    <label for="field-name">Nome da disciplina</label>
                 </div>
 
                 <div class="box">
-                    <input type="text" id="field-pass"/>
-                    <label for="field-pass">Senha</label>
+                    <input type="integer" id="field-n_av"/>
+                    <label for="field-n_av">Numero de avaliaçoes</label>
                 </div>
 
-                <div class="box">
-                    <input type="text" id="field-mail"/>
-                    <label for="field-mail">E-mail</label>
-                </div>
+          
                 <div class="per"><a id="btn-salvar" class="button" >SALVAR</a></div>
                 <div class="per"><a id="btn-deletar" class="button" >DELETAR</a></div>
             </form>
             <table id="table-register">
                 <thead>
                     <th>Nome</th>
-                    <th>Senha</th>
-                    <th>Email</th>
+                    <th>Numero de avaliaçoes</th>
+               
                 </thead>
                 <tbody id="tbody-register">
                 
@@ -45,3 +42,4 @@
     </body>
 
 </html>
+
