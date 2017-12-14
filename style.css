@@ -3,10 +3,11 @@
     padding: 0;
     font-family: 'Bitter', serif;
     font-size: inherit;
-    color: inherit;
+    /*color: inherit;*/
     box-sizing: border-box;
     transition: all 0.3s;
-    border: none;
+    border: border-collapse;
+
 }
 
 *:focus{
@@ -15,16 +16,15 @@
 
 body{
     height: calc(100vh - 80px)  ;
-    background: url(background.jpg);
-    background-size: cover;
+
 }
 
 h1{
   text-align: center;
   font-size: 35px;
   margin: 80px 0 100px 0;
-  color: #FFF;
-  text-shadow: 0 0 3px #000;
+  /*color*/: #FFF;
+  text-shadow: 0 0 3px #/*000*/;
 }
 
 .aligncenter{
@@ -36,15 +36,15 @@ h1{
 
 table{
     font-size: 20px;
-    color: #FFF;
-    border: 20px solid #F26522;
-    box-shadow: 0px 0px 3px #000;
-    background: #EF4D02;
+    color: #/*FFF*/;
+    border: 20px solid #/*F26522*/;
+    box-shadow: 0px 0px 3px #/*000*/;
+    background: #/*EF4D02*/;
     border-collapse: collapse;
 }
 
 td:first-of-type{
-    cursor: pointer;
+    cursor: pointer border-collapse;
 }
 
 td,th{
@@ -52,11 +52,11 @@ td,th{
     font-weight: normal;
     width: 200px;
     text-align: center;
-    border-right: 3px solid #F26522;
+    border-right: 3px solid #/*F26522*/border-collapse;
 }
 
 tr:nth-of-type(odd) td{
-    background: #ED6125;
+    background: #/*ED6125*/;
 }
 
 /*FORM*/
@@ -67,8 +67,8 @@ tr:nth-of-type(odd) td{
     padding: 20px;
     margin-right: 40px;
     font-size: 20px;
-    box-shadow: 0px 0px 3px #000;
-    background: #F26522;
+    box-shadow: 0px 0px 3px #/*000*/;
+    background: #/*F26522*/;
 }
 
 .box{
@@ -76,7 +76,7 @@ tr:nth-of-type(odd) td{
     overflow: hidden;
     height: 50px;
     margin-bottom: 20px;
-    background: #EF4D02;
+    /*background: #EF4D02;*/
 }
 
 .box > input{
@@ -93,7 +93,7 @@ tr:nth-of-type(odd) td{
     width: 100%;
     padding: 13px;
     cursor: pointer;
-    color: #FFF;
+    /*color*/: #/*FFF*/;
 }
 
 .box.ativo input,input:focus{  transform: translateX(0);    }
@@ -102,10 +102,10 @@ tr:nth-of-type(odd) td{
 
 .per{perspective: 800px; }
 
-a.button:active{
+button:active{
     transform: rotateX(0deg); 
 }
-a.button{
+button{
     position: relative;
     display: block;
     padding: 13px;
@@ -114,12 +114,12 @@ a.button{
     -webkit-transform: rotateX(15deg);
     transform-style: preserve-3d;
     text-align: center;
-    color: #FFF;
+    /*color: #FFF;*/
     cursor: pointer;
-    background: #EF4D02;
+    /*background: #EF4D02;*/
 }
 
-a.button:after{
+button:after{
     position: absolute;
     left: 0;
     top: 100%;
@@ -129,9 +129,16 @@ a.button:after{
     transition: all 0.3s;
     transform: rotateX(-90deg);
     transform-origin: 0% 0%;
-    background: #EA2C02;
+    /*background: #EA2C02;*/
 }
 
 #btn-deletar{
     display: none;
+}
+
+.page--full_bg__background {
+    
+}
+
+.page-full_bg > .navigation-bar {
 }
