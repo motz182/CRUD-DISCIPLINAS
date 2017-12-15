@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <script type="text/javascript " src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style.css" />
     <link rel='stylesheet prefetch' href='https://unpkg.com/onsenui/css/onsenui.css'>
     <link rel='stylesheet prefetch' href='https://unpkg.com/onsenui/css/onsen-css-components.css'>
-   
+    <!-- <script src="components/loader.js"></script> -->
 
     <script src='https://unpkg.com/onsenui/js/onsenui.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
 
+    
     <title>calculador de notas</title>
 </head>
 
@@ -43,8 +43,6 @@
       <ons-list-item modifier="longdivider">Exemplo de disciplina</ons-list-item>
           
       </ons-list>
-      <div class="background-image">
-      </div>
       <div style="text-align: center">
 
        <ons-button >Gerenciar disciplinas</ons-button><br>
@@ -68,6 +66,17 @@
     </ons-page>
   </template>
 
+
+
+
+
+
+
+
+
+
+
+
 <template id="page2.html" >
   <ons-page id="page2">
     <ons-toolbar>
@@ -76,47 +85,33 @@
     </ons-toolbar>
 
 
-    <div class="aligncenter">
-    <form class="form">
-      <input type="hidden" id="field-id" value="" />
-      <div >
-          <label for="field-name">Nome da disciplina</label>
-          <ons-input id="field-name" modifier="underbar"  placeholder="Nome da Disciplina" ></ons-input>
 
-     
-        <label for="field-n_av">Numero de avaliaçoes</label>
-        <ons-input id="field-n_av" modifier="underbar" placeholder="numero de avs" float "></ons-input>
-      </div>
+    <form class="form" action="banco.js">
+      <div class="aligncenter" class="wrapper">
+        <fieldset>
+          <input type="hidden" id="field-id" value="" />
+          <div class="field-wrapper">
+              <label for="field-name">Nome da disciplina :</label>
+              <ons-input id="field-name" modifier="underbar"  placeholder="Nome da Disciplina" ></ons-input>
+          </div>
+          <div class="field-wrapper">
+              <label for="field-n_av">Numero de avaliações :</label>
+              <ons-input id="field-n_av" modifier="underbar" placeholder="numero de avs"  data-validation="required" "></ons-input>
+          </div>
+        </fieldset><br>
 
-      <div style="text-align: center">
-         <ons-button  id="btn-salvar" > Adicionar</ons-button>
-         
-      </div>
-     
-      <div class="per"> 
-        <ons-button  id="btn-deletar"  >DELETAR</ons-button>
+        <div style="text-align: center">
+           <ons-button  id="salvar"  tappable onclick="get_action()"> Adicionar</ons-button>
+
+           <br><br>
+        <!--  <ons-button  type="submit" id="deletar"> Deletar</ons-button> -->
       </div>
 
     </form>
     </div>
     
-
 </ons-page>
 </template>
-
-<!-- <ons-template id="options.html" >
-        <ons-page>
-            <ons-toolbar>
-                <div class="center">Options</div>
-            </ons-toolbar>         
-            <ons-list modifier="inset" style="margin-top:10px;">
-                <ons-list-item>
-                  Detailed Stats
-                  <ons-switch modifier="list-item" id="optStats"></ons-switch>
-                </ons-list-item>
-            </ons-list>            
-        </ons-page>
-    </ons-template> -->
 
 
 <script src='https://unpkg.com/onsenui/js/onsenui.js'></script>
@@ -125,8 +120,9 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
 <script  src="js/index.js"></script>
 <script  src="js/banco.js"></script>  
-<script  src="js/main.js"></script>
-<script  src="js/calculo.js"></script>  
+<script  src="js/calculo.js"></script>
+<!-- <link rel="stylesheet" href="style.css" /> -->
+
 
 </body>
 
