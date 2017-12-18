@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript " src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet prefetch' href='https://unpkg.com/onsenui/css/onsenui.css'>
+    <link rel='stylesheet prefetch' href='https://unpkg.com/onsenui/css/onsen-css-components.css'>
+    <!-- <script src="components/loader.js"></script> -->
+
+    <link rel="stylesheet" href="style.css" />
+    <script src='https://unpkg.com/onsenui/js/onsenui.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+    <script  src="js/index.js"></script>
+    <script  src="js/banco.js"></script>  
+    <script  src="js/calculo.js"></script>
+    <script >
+      
+    </script>
+    
+    <title>calculador de notas</title>
+</head>
+
+<body>
+<!--     <h1>calculador de notas</h1>
+     -->
+  <ons-navigator swipeable id="myNavigator" page="page1.html"></ons-navigator>
+
+  <template id="page1.html">
+    <ons-page id="page1" >
+      <ons-toolbar>
+          <div class="center">App de preguiçoso</div>
+          <!-- <img class="post-image" src="img/logo.png" class="img-responsive pull-right" > -->
+
+      </ons-toolbar>
+      <p>Este aplicativo tem por finalidade calcular o valor da ultima nota que se precisa para ser aprovado nas disciplinas cadastradas.</p>
+      <fieldset>
+        <ons-list modifier="insert" >
+            <ons-list-header>Lista de disciplinas inseridas</ons-list-header>
+              <table id="table-register">
+                <thead>
+                  <th>Nome</th>
+                  <th>Numero de avaliaçoes</th>
+                </thead>
+                  <tbody id="tbody-register">
+                </tbody>
+              </table>
+        <ons-list-item modifier="longdivider">Exemplo de disciplina</ons-list-item>
+        </ons-list>
+        <br>      
+   
+        <div style="text-align: center">
+          <ons-button >Gerenciar disciplinas</ons-button><br>
+          <br>
+          <ons-button id="sobre" tappable onclick="showDialog('dialog-1')">Sobre</ons-button>
+        </div>
+        <ons-dialog id="dialog-1">
+            <div style="text-align: center; padding: 10px;">
+             <p>
+               Este software foi desenvolvido com intenção literária e de forma auto didáta por Moisés Alberto Reichert, para contato motz182@gmail.com .
+             </p>
+             <p>
+              <ons-button onclick="hideDialog('dialog-1')">Close</ons-button>
+             </p>
+            </div>
+        </ons-dialog>
+
+        <ons-dialog id="dialog-valida">
+            <div style="text-align: center; padding: 10px;">
+             <p>
+               Os campos de nome e senha são obrigatorios
+             </p>
+             <p>
+              <ons-button onclick="hideDialog('dialog-valida')">Ok</ons-button>
+             </p>
+            </div>
+        </ons-dialog>
+      
+
+      <ons-fab position="bottom right" ">
+          <ons-icon id="push-button" icon="md-plus"></ons-icon>
+      </ons-fab>
+      </fieldset>
+      <ons-footer position="bottom" > developed by High Solutions </ons-footer>
+
+    </ons-page>
+  </template>
+
+
+<template id="page2.html" >
+  <ons-page id="page2">
+    <ons-toolbar>
+      <div class="left"><ons-back-button>Voltar</ons-back-button></div>
+      <div class="center"></div>
+    </ons-toolbar>
+
+    <form class="form" action="banco.js" ">
+      <div class="aligncenter" class="wrapper">
+        <fieldset>
+          <!-- <input type="hidden" id="field-id" value="" /> -->
+          <div class="field-wrapper">
+              <ons-label for="field-name">Nome da disciplina :</ons-label>
+              <ons-input id="field-name" modifier="underbar"  placeholder="Nome da Disciplina" verifica()="required"></ons-input>
+          </div>
+          <div class="field-wrapper">
+              <ons-label for="field-n_av">Numero de avaliações :</ons-label>
+              <ons-input id="field-n_av" modifier="underbar" placeholder="numero de avs" verifica()="required" ></ons-input>
+          </div>
+        </fieldset><br>
+
+        <div style="text-align: center">
+           <ons-button type="submit" tappable onclick="get_action()"
+> Adicionar</ons-button>
+           <br><br>
+        <!--  <ons-button  type="submit" id="deletar"> Deletar</ons-button> -->
+      </div>
+
+    </form>
+    </div>
+    
+</ons-page>
+</template>
+
+
+<script src='https://unpkg.com/onsenui/js/onsenui.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+
+
+
+</body>
+
+</html>

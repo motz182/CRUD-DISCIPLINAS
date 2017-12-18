@@ -8,16 +8,16 @@ document.addEventListener('init', function(event) {
   } else if (page.id === 'page2') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
   }
-});
+})
 
 var showDialog = function (id) {
   document
     .getElementById(id)
     .show();
-};
+}
 var hideDialog = function (id) {
   document
     .getElementById(id)
     .hide();
-};
+}
 
