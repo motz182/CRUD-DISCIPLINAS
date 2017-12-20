@@ -11,7 +11,7 @@ function carregado(){
 
 function get_action(form) {  
 
-    // var id = document.getElementById('field-id').value;
+    var id = document.getElementById('field-id').value;
     var nome = document.getElementById('field-name').value;
     var n_av = document.getElementById('field-n_av').value;
     

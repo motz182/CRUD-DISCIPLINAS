@@ -1,7 +1,5 @@
 # App notas - Projeto em desenvolvimento #
 
-[![Github-Release](https://img.shields.io/badge/PHP-v7.x-green.svg)](https://github.com/php/php-src/releases)
-[![Github-Release](https://img.shields.io/badge/Laravel-v5.5-green.svg)](https://github.com/laravel/laravel/releases)
 
 ### O projeto do app tem como objetivo automatizar o calculo da nota necessaria para passar na disciplina###
 
